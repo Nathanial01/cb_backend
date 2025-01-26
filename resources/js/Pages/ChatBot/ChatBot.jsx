@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-
+import axios from "axios";
 const ChatBot = () => {
     const [isChatboxOpen, setIsChatboxOpen] = useState(false);
     const [messages, setMessages] = useState([
@@ -20,41 +20,29 @@ const ChatBot = () => {
         e.preventDefault();
         if (!input.trim()) return;
 
-        const userMessage = {sender: "You", text: input};
+        const userMessage = { sender: "You", text: input };
         setMessages((prev) => [...prev, userMessage]);
         setInput("");
         setLoading(true);
 
         try {
-            // Send the message to the backend
-            const response = await fetch(API_URL, {
-                method: "POST",
-                headers: {"Content-Type": "application/json"},
-                body: JSON.stringify({
-                    Name: "User Name",
-                    message: input,
-                    subscription_tier: "free", // Update based on user tier logic
-                }),
+            // Send the message to the backend using Axios
+            const response = await axios.post(API_URL, {
+                Name: "User Name",
+                message: input,
+                subscription_tier: "free", // Update based on user tier logic
             });
 
-            if (!response.ok) {
-                const error = await response.json();
-                setMessages((prev) => [
-                    ...prev,
-                    {sender: "Cyrox", text: error.error || "An error occurred. Please try again."},
-                ]);
-                setLoading(false);
-                return;
-            }
+            const data = response.data;
 
-            const data = await response.json();
-
-            const botMessage = {sender: "Cyrox", text: data.reply || "No response received."};
+            const botMessage = { sender: "Cyrox", text: data.reply || "No response received." };
             setMessages((prev) => [...prev, botMessage]);
         } catch (error) {
+            // Handle errors
+            const errorMessage = error.response?.data?.error || "Failed to connect to the server. Please try again later.";
             setMessages((prev) => [
                 ...prev,
-                {sender: "Cyrox", text: "Failed to connect to the server. Please try again later."},
+                { sender: "Cyrox", text: errorMessage },
             ]);
         } finally {
             setLoading(false);

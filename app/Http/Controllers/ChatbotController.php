@@ -3,15 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use OpenAI\Client as OpenAIClient;
+use OpenAI;
 
 class ChatbotController extends Controller
 {
-    protected $openai;
+    protected OpenAI\Client $openai;
 
     public function __construct()
     {
-        $this->openai = OpenAIClient::factory(['api_key' => env('OPENAI_API_KEY')]);
+        // Initialize OpenAI client using the API key from the environment
+        $this->openai = OpenAI::client(env('OPENAI_API_KEY'));
     }
 
     public function handleChat(Request $request)
@@ -22,19 +23,22 @@ class ChatbotController extends Controller
         ]);
 
         try {
-            // Call OpenAI API
+            // Call OpenAI API for completion
             $response = $this->openai->completions()->create([
                 'model' => 'text-davinci-003',
                 'prompt' => $request->message,
                 'max_tokens' => 100,
             ]);
 
+            // Extract the response text
+            $reply = $response['choices'][0]['text'];
+
             return response()->json([
-                'message' => $response['choices'][0]['text'],
+                'message' => trim($reply), // Trim to remove unnecessary spaces or line breaks
             ]);
         } catch (\Exception $e) {
             return response()->json([
-                'error' => 'Failed to process the request.',
+                'error' => 'Failed to process the request: ' . $e->getMessage(),
             ], 500);
         }
     }
