@@ -85,128 +85,32 @@ const ChatBot = () => {
 
             {/* Chatbox */}
             {isChatboxOpen && (
-                <div className="fixed align-middle bottom-24 right-6 rounded-xl shadow-xl w-96 pt-8">
+                <div
+                    className="fixed align-middle bottom-4 sm:bottom-6 right-4 sm:right-6 rounded-xl shadow-xl w-full sm:w-96 pt-8"
+                >
                     {/* Chat Header */}
                     <div
-                        className="bg-indigo-950 bg-opacity-25 backdrop-blur-3xl  transition-all duration-300 hover:shadow-xl hover:bg-opacity-100 space-y-4  flex flex-col items-center justify-center w-full py-4 text-black dark:text-white rounded-t-lg shadow-md">
-                        <h1 className="text-2xl font-extrabold tracking-tight text-black dark:text-white">ChatBot</h1>
-                        <p className="text-sm font-medium text-black dark:text-white ">Powered by CyroX</p>
-                        <div className="space-y-4"></div>
-                    </div>
-                    {/*side colm */}
-                    <div
-                        className="bg-indigo-950 bg-opacity-25 backdrop-blur-3xl  absolute flex flex-col items-center justify-between  rounded-lg px-2 py-6 shadow-lg w-18 -left-20 bottom-96 mx-auto transition-all duration-300 hover:shadow-xl hover:bg-opacity-100 space-y-4"
+                        className="bg-indigo-950 bg-opacity-25 backdrop-blur-3xl transition-all duration-300 hover:shadow-xl hover:bg-opacity-100 flex flex-col items-center justify-center w-full py-4 text-black dark:text-white rounded-t-lg shadow-md"
                     >
-                        <button
-                            className="text-black dark:text-white  hover:text-red-400 mx-2 transition-transform duration-200 ease-in-out hover:scale-110 focus:outline-none focus:ring-2 focus:ring-red-500 rounded-full"
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="h-6 w-6"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth="2"
-                                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                                ></path>
-                            </svg>
-                        </button>
-                        <button
-                            className="text-black dark:text-white  hover:text-gray-200 mx-2 transition-all duration-200 ease-in-out hover:rotate-12 focus:outline-none focus:ring-2 focus:ring-gray-400 rounded-full"
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="h-6 w-6"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth="2"
-                                    d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11"
-                                ></path>
-                            </svg>
-                        </button>
-                        <button
-                            className="text-black dark:text-white  hover:text-gray-200 mx-2 transition-all duration-200 ease-in-out hover:bg-gray-800 hover:shadow-md rounded-full p-1 focus:outline-none focus:ring-2 focus:ring-gray-400"
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="h-6 w-6"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth="2"
-                                    d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                                ></path>
-                            </svg>
-                        </button>
-                        <button
-                            className="text-black dark:text-white  hover:text-gray-200 mx-2 transition-transform duration-200 ease-in-out hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-gray-400 rounded-full"
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="h-6 w-6"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth="2"
-                                    d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                                ></path>
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth="2"
-                                    d="M9 10a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z"
-                                ></path>
-                            </svg>
-                        </button>
-
-                        <button
-                            className="text-black dark:text-white  hover:text-gray-200 mx-2 transition-all duration-200 ease-in-out hover:rotate-180 focus:outline-none focus:ring-2 focus:ring-gray-400 rounded-full"
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="h-6 w-6"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth="2"
-                                    d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-                                ></path>
-                            </svg>
-                        </button>
+                        <h1 className="text-lg sm:text-2xl font-extrabold tracking-tight text-black dark:text-white">
+                            ChatBot
+                        </h1>
+                        <p className="text-xs sm:text-sm font-medium text-black dark:text-white">
+                            Powered by CyroX
+                        </p>
                     </div>
-
-                    {/* end colm */}
 
                     {/* Chat Messages */}
                     <div
                         className="p-4 overflow-y-auto bg-indigo-950 bg-opacity-25 backdrop-blur-3xl"
-                        style={{ height: "300px" }}
+                        style={{height: "300px"}}
                     >
                         {messages.map((msg, index) => (
                             <div
                                 key={index}
-                                className={`my-2 ${msg.sender === "You" ? "text-right" : "text-left"}`}
+                                className={`my-2 ${
+                                    msg.sender === "You" ? "text-right" : "text-left"
+                                }`}
                             >
                                 <p
                                     className={`inline-block p-2 rounded-md ${
@@ -221,59 +125,21 @@ const ChatBot = () => {
                         ))}
                     </div>
 
-
                     {/* Chat Input */}
                     <div
-                        className="bg-indigo-950 bg-opacity-25 backdrop-blur-3xl grid grid-cols-6 gap-3 rounded-b-xl p-4 text-sm shadow-lg hover:shadow-xl transition-all duration-300">
-                        <textarea
-                            value={input}
-                            onChange={(e) => setInput(e.target.value)}
-                            className="bg-indigo-900 bg-opacity-25 backdrop-blur-xl text-slate-600 h-32 placeholder:text-slate-400 col-span-6 resize-none outline-none rounded-lg p-3 duration-300 focus:ring-2 focus:ring-slate-200 focus:shadow-inner"
-                            placeholder="Your message..."
-                            disabled={loading}
-                        ></textarea>
-                        <button
-                            type="button"
-                            className=" col-span-1 flex justify-center items-center rounded-lg p-3 duration-300 bg-non hover:bg-slate-100 hover:border-slate-600 active:scale-95 focus:fill-blue-200 focus:bg-blue-400  hover:shadow-md group"
-                        >
-                            <svg
-                                className="transform transition-transform group-hover:scale-110 duration-200"
-                                viewBox="0 0 512 512"
-                                height="20px"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm177.6 62.1C192.8 334.5 218.8 352 256 352s63.2-17.5 78.4-33.9c9-9.7 24.2-10.4 33.9-1.4s10.4 24.2 1.4 33.9c-22 23.8-60 49.4-113.6 49.4s-91.7-25.5-113.6-49.4c-9-9.7-8.4-24.9 1.4-33.9s24.9-8.4 33.9 1.4zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"
-                                ></path>
-                            </svg>
-                        </button>
-
-                        {/* Right Icon Button */
-                        }
-                        <button
-                            type="button"
-                            className="fill-slate-600 col-span-1 flex justify-center items-center rounded-lg p-3 duration-300 bg-none hover:bg-slate-100 hover:border-slate-600 active:scale-95 focus:fill-blue-200 focus:bg-blue-400   hover:shadow-md group"
-                        >
-                            <svg
-                                className="transform transition-transform group-hover:scale-110 duration-200"
-                                viewBox="0 0 512 512"
-                                height="20px"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM174.6 384.1c-4.5 12.5-18.2 18.9-30.7 14.4s-18.9-18.2-14.4-30.7C146.9 319.4 198.9 288 256 288s109.1 31.4 126.6 79.9c4.5 12.5-2 26.2-14.4 30.7s-26.2-2-30.7-14.4C328.2 358.5 297.2 336 256 336s-72.2 22.5-81.4 48.1zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"
-                                ></path>
-                            </svg>
-                        </button>
-                        {/*spacibg*/}
-                        <div></div>
-                        <div></div>
-                        {/*spacibg*/}
-                        {/* Submit Button */}
+                        className="bg-indigo-950 bg-opacity-25 backdrop-blur-3xl grid grid-cols-6 gap-3 rounded-b-xl p-4 text-sm shadow-lg hover:shadow-xl transition-all duration-300"
+                    >
+        <textarea
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            className="bg-indigo-900 bg-opacity-25 backdrop-blur-xl text-slate-600 h-24 sm:h-32 placeholder:text-slate-400 col-span-6 resize-none outline-none rounded-lg p-3 duration-300 focus:ring-2 focus:ring-slate-200 focus:shadow-inner"
+            placeholder="Your message..."
+            disabled={loading}
+        ></textarea>
                         <button
                             type="submit"
                             onClick={handleFormSubmit}
-                            className="bg-none stroke-slate-600 col-span-2 flex items-center justify-center gap-2 rounded-lg p-3 duration-300 hover:bg-slate-100 hover:border-slate-600 active:scale-95 focus:stroke-blue-200 focus:bg-blue-400 hover:shadow-md group"
+                            className="col-span-6 sm:col-span-2 flex items-center justify-center gap-2 rounded-lg p-3 duration-300 hover:bg-slate-100 hover:border-slate-600 active:scale-95 focus:stroke-blue-200 focus:bg-blue-400 hover:shadow-md group"
                             disabled={loading}
                         >
                             <svg
@@ -298,21 +164,8 @@ const ChatBot = () => {
                                 ></path>
                             </svg>
                             <span className="font-medium text-slate-900 group-hover:text-slate-800">
-                                  {loading && (
-                                      /* From Uiverse.io by Javierrocadev */
-                                      /* From Uiverse.io by SmookyDev */
-                                      <div
-                                          className="w-8 aspect-square rounded-full relative flex justify-center items-center animate-[spin_3s_linear_infinite] z-40 bg-[conic-gradient(white_0deg,white_300deg,transparent_270deg,transparent_360deg)] before:animate-[spin_2s_linear_infinite] before:absolute before:w-[60%] before:aspect-square before:rounded-full before:z-[80] before:bg-[conic-gradient(white_0deg,white_270deg,transparent_180deg,transparent_360deg)] after:absolute after:w-3/4 after:aspect-square after:rounded-full after:z-[60] after:animate-[spin_3s_linear_infinite] after:bg-[conic-gradient(#065f46_0deg,#065f46_180deg,transparent_180deg,transparent_360deg)]"
-                                      >
-  <span
-      className="absolute w-[20%] aspect-square rounded-full z-[60] animate-[spin_5s_linear_infinite] bg-[conic-gradient(#34d399_0deg,#34d399_180deg,transparent_180deg,transparent_360deg)]"
-  >
-  </span>
-                                      </div>
-
-
-                                  )}
-                            </span>
+                {loading ? "Sending..." : "Send"}
+            </span>
                         </button>
                     </div>
                 </div>
