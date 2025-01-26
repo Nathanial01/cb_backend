@@ -1,0 +1,15 @@
+  <svg
+      width="20"
+      height="20"
+      viewBox="0 0 0.6 0.6"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+       className="text-gray-900 dark:text-gray-100 fill-current"
+    >
+      <path
+        d="M.169.163a.131.131 0 1 1 .263 0 .131.131 0 0 1-.263 0M.106.465A.133.133 0 0 1 .239.332H.36a.133.133 0 0 1 .133.133.104.104 0 0 1-.104.104H.211A.104.104 0 0 1 .107.465"
+        fillRule="evenodd"
+        clipRule="evenodd"
+        fill="#000"
+      />
+    </svg>

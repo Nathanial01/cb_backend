@@ -1,0 +1,46 @@
+:root {
+    --smiley-1: '😊';
+    --smiley-2: '😇';
+    --smiley-3: '😁';
+    --smiley-4: '😉';
+    --color-0: #ffffff;
+    --color-1: #15791a;
+    --color-2: #a3f706;
+    --color-3: #ffae00;
+    --color-4: hsl(198, 62%, 48%);
+    --color-5: #17d21e;
+    --color-6: rgb(20, 64, 40);
+    --color-7: rgb(0, 255, 115);
+    --COLOR-9:#ff7;
+  }
+  
+  .marquee-wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    position: relative;
+    /*box-shadow: 
+                inset 0 -4px 5px rgb(0, 0, 0); /* Bottom shadow */
+  }
+  
+  .marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee-animation 80s linear infinite; 
+  }
+  
+  .marquee-item {
+    display: inline-block;
+    padding: 0 20px; 
+    margin-right: 10px; 
+  }
+
+  
+  .marquee-item-link {
+    display: inline-block;
+    text-decoration: none;
+ 
+  }
+  

@@ -1,0 +1,17 @@
+ <svg
+      width="40"
+      height="40"
+      viewBox="0 0 1.8 1.8"
+      xmlns="http://www.w3.org/2000/svg"
+       className="text-gray-900 dark:text-gray-100 fill-current"
+    >
+      <path
+        className="clr-i-solid clr-i-solid-path-1"
+        d="M1.65 0.95a0.05 0.05 0 0 1 -0.035 -0.014L0.9 0.221 0.185 0.936A0.05 0.05 0 0 1 0.115 0.865l0.75 -0.75a0.05 0.05 0 0 1 0.07 0l0.75 0.75A0.05 0.05 0 0 1 1.65 0.95"
+      />
+      <path
+        className="clr-i-solid clr-i-solid-path-2"
+        d="M0.9 0.39 0.3 0.991V1.6a0.1 0.1 0 0 0 0.1 0.1h0.35V1.2h0.3v0.5h0.35a0.1 0.1 0 0 0 0.1 -0.1V0.988Z"
+      />
+      <path fill="none" d="M0 0h1.8v1.8H0z" />
+    </svg>

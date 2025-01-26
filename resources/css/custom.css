@@ -1,0 +1,546 @@
+/* resources/css/custom.css */
+/*.bg-img {*/
+/*    @apply bg-cover bg-center min-h-screen bg-[url('/img/bg/bg_day.svg')] dark:bg-[url('/img/bg/bg_dark.svg')];*/
+/*}*/
+
+/*.bg-img-mobile {*/
+/*    @apply bg-cover bg-center min-h-[300px] bg-[url('/img/bg/bg_day.svg')] dark:bg-[url('/img/bg/bg_dark.svg')];*/
+/*}*/
+
+.notification-bar-dark-mode {
+    @apply backdrop-blur bg-gradient-to-r from-amber-500 via-yellow-600 to-blue-500  z-50;
+}
+.nav-bar-dark-mode {
+    @apply backdrop-blur bg-gray-300/50 dark:bg-gray-700/50 z-50;
+}
+.svg-dark-mode {
+    @apply fill-current text-gray-950 dark:text-gray-50;
+}
+/* bg texts */
+
+.bg-dark-mode {
+    @apply bg-gray-50 dark:bg-gray-950;
+}
+.use-dark-mode {
+    @apply text-sm text-gray-950 hover:text-gray-500 dark:text-gray-50 dark:hover:text-gray-300;
+}
+.text-heading {
+    @apply text-sm font-semibold text-green-600;
+}
+
+/* nav Links */
+.text-dark{
+    @apply  font-bold text-gray-950  dark:text-gray-50;
+}
+.text-dark-mode-reverse{
+    @apply  font-bold text-gray-50  dark:text-gray-950;
+}
+.text-dark-mode {
+    @apply  text-base ml-2 antialiased text-gray-950  dark:text-gray-50;
+}
+.it-is-link {
+    @apply  text-gray-950  dark:text-gray-50;
+}
+.logout-link-dark-mode-hovers {
+    @apply  text-base ml-2 antialiased text-gray-950 hover:text-[#E63946] dark:text-gray-50 dark:hover:text-[#E63962];
+}
+.it-is-link-dark {;
+    @apply text-base ml-2 antialiased text-gray-950  dark:text-gray-50
+}
+.text-dark-mode-hovers {
+    @apply  text-sm ml-2 antialiased text-gray-950 hover:text-amber-400 dark:text-gray-50 dark:hover:text-amber-300;
+}
+.register-link-dark-hovers {
+    @apply inline-block
+    bg-gradient-to-r
+    from-amber-500
+    to-yellow-400
+    px-4
+    py-2
+    rounded-md
+    font-medium
+    text-gray-50
+    dark:text-gray-950
+    hover:from-yellow-400
+    hover:to-amber-500
+    transition
+    duration-300
+    ease-in-out;
+}
+/*hamburger menu*/
+.hamburger-menu-dark-mode {
+    @apply block absolute h-0.5 w-5 text-gray-950  dark:text-gray-50 bg-current transform transition duration-500 ease-in-out;
+}
+/* welcome page text */
+.welcome-text-dark-mode {
+    @apply text-sm font-bold text-gray-950 dark:text-gray-50;
+}
+/* price */
+.price-table-header-dark-mode {
+    @apply -mx-4 rounded-lg bg-gray-900 bg-opacity-50 backdrop-blur px-4 py-3;
+}
+.price-table-dark-mode {
+    @apply   bg-gray-50 dark:bg-gray-700 shadow-lg ;
+}
+.price-table-gradient-dark-mode {
+    @apply rounded-lg
+    ring-2
+    ring-transparent
+    bg-gradient-to-r
+    from-amber-500
+    to-amber-400;
+}
+
+.welcome-header-dark-mode {
+    @apply  text-base text-gray-950 dark:text-gray-50;
+}
+
+/* call for action button */
+.call-for-action-dark-mode {
+    @apply  text-sm/8  ml-2 mt-4 space-y-2 text-gray-950 hover:text-gray-500 dark:text-gray-50 dark:hover:text-gray-300;
+}
+.call-for-action-hovers {
+    @apply  text-black dark:text-gray-300 hover:text-yellow-700 dark:hover:text-yellow-500 transition-colors cursor-pointer;
+}
+/* footer nav Links */
+
+.footer-link-dark-mode-hovers {
+    @apply  text-sm/6 text-gray-950 hover:text-gray-500 dark:text-gray-50 dark:hover:text-gray-300
+}
+.footer-page-link-dark-mode {
+    @apply  text-sm/6 text-gray-950 dark:text-gray-50 ;
+}
+
+
+
+/* Highlighted Text */
+.text-highlight {
+    @apply text-lg font-bold text-yellow-500 dark:text-yellow-400;
+}
+
+/* Muted Text */
+.text-muted {
+    @apply text-sm text-gray-600 dark:text-gray-400;
+}
+
+/* Error Text */
+.text-error {
+    @apply text-sm font-medium text-red-600 dark:text-red-400;
+}
+
+/* Success Text */
+.text-success {
+    @apply text-sm font-medium text-green-600 dark:text-green-400;
+}
+
+.separate-line {
+    @apply dark:border-white/20 border-black/20
+}
+.sub-text{
+    @apply    text-gray-600 dark:text-gray-300
+}/* resources/css/custom.css */
+/*.bg-img{*/
+/*    @apply bg-cover  bg-center min-h-screen bg-[url('/public/img/bg/bg_day.svg')] dark:bg-[url('/public/img/bg/bg_dark.svg')];*/
+/*}*/
+.notification-bar-dark-mode {
+    @apply backdrop-blur bg-gradient-to-r from-amber-500 via-yellow-600 to-blue-500  z-50;
+}
+.nav-bar-dark-mode {
+    @apply backdrop-blur bg-gray-300/50 dark:bg-gray-700/50 z-50;
+}
+.svg-dark-mode {
+    @apply fill-current text-gray-950 dark:text-gray-50;
+}
+/* bg texts */
+
+.bg-dark-mode {
+    @apply bg-gray-50 dark:bg-gray-950;
+}
+.use-dark-mode {
+    @apply text-sm text-gray-950 hover:text-gray-500 dark:text-gray-50 dark:hover:text-gray-300;
+}
+.text-heading {
+    @apply text-sm font-semibold text-green-600;
+}
+
+/* nav Links */
+.text-dark{
+    @apply  font-bold text-gray-950  dark:text-gray-50;
+}
+.text-dark-mode-reverse{
+    @apply  font-bold text-gray-50  dark:text-gray-950;
+}
+.text-dark-mode {
+    @apply  text-base ml-2 antialiased text-gray-950  dark:text-gray-50;
+}
+.it-is-link {
+    @apply  text-gray-950  dark:text-gray-50;
+}
+.logout-link-dark-mode-hovers {
+    @apply  text-base ml-2 antialiased text-gray-950 hover:text-[#E63946] dark:text-gray-50 dark:hover:text-[#E63962];
+}
+.it-is-link-dark {;
+    @apply text-base ml-2 antialiased text-gray-950  dark:text-gray-50
+}
+.text-dark-mode-hovers {
+    @apply  text-sm ml-2 antialiased text-gray-950 hover:text-amber-400 dark:text-gray-50 dark:hover:text-amber-300;
+}
+.register-link-dark-hovers {
+    @apply inline-block
+    bg-gradient-to-r
+    from-amber-500
+    to-yellow-400
+    px-4
+    py-2
+    rounded-md
+    font-medium
+    text-gray-50
+    dark:text-gray-950
+    hover:from-yellow-400
+    hover:to-amber-500
+    transition
+    duration-300
+    ease-in-out;
+}
+/*hamburger menu*/
+.hamburger-menu-dark-mode {
+    @apply block absolute h-0.5 w-5 text-gray-950  dark:text-gray-50 bg-current transform transition duration-500 ease-in-out;
+}
+/* welcome page text */
+.welcome-text-dark-mode {
+    @apply text-sm font-bold text-gray-950 dark:text-gray-50;
+}
+/* price */
+.price-table-header-dark-mode {
+    @apply -mx-4 rounded-lg bg-gray-900 bg-opacity-50 backdrop-blur px-4 py-3;
+}
+.price-table-dark-mode {
+    @apply   bg-gray-50 dark:bg-gray-700 shadow-lg ;
+}
+.price-table-gradient-dark-mode {
+    @apply rounded-lg
+    ring-2
+    ring-transparent
+    bg-gradient-to-r
+    from-amber-500
+    to-amber-400;
+}
+
+.welcome-header-dark-mode {
+    @apply  text-base text-gray-950 dark:text-gray-50;
+}
+
+/* call for action button */
+.call-for-action-dark-mode {
+    @apply  text-sm/8  ml-2 mt-4 space-y-2 text-gray-950 hover:text-gray-500 dark:text-gray-50 dark:hover:text-gray-300;
+}
+.call-for-action-hovers {
+    @apply  text-black dark:text-gray-300 hover:text-yellow-700 dark:hover:text-yellow-500 transition-colors cursor-pointer;
+}
+/* footer nav Links */
+
+.footer-link-dark-mode-hovers {
+    @apply  text-sm/6 text-gray-950 hover:text-gray-500 dark:text-gray-50 dark:hover:text-gray-300
+}
+.footer-page-link-dark-mode {
+    @apply  text-sm/6 text-gray-950 dark:text-gray-50 ;
+}
+
+
+
+/* Highlighted Text */
+.text-highlight {
+    @apply text-lg font-bold text-yellow-500 dark:text-yellow-400;
+}
+
+/* Muted Text */
+.text-muted {
+    @apply text-sm text-gray-600 dark:text-gray-400;
+}
+
+/* Error Text */
+.text-error {
+    @apply text-sm font-medium text-red-600 dark:text-red-400;
+}
+
+/* Success Text */
+.text-success {
+    @apply text-sm font-medium text-green-600 dark:text-green-400;
+}
+
+.separate-line {
+    @apply dark:border-white/20 border-black/20
+}
+.sub-text{
+    @apply    text-gray-600 dark:text-gray-300
+}/* resources/css/custom.css */
+/*.bg-img{*/
+/*    @apply bg-cover  bg-center min-h-screen bg-[url('/public/img/bg/bg_day.svg')] dark:bg-[url('/public/img/bg/bg_dark.svg')];*/
+/*}*/
+.notification-bar-dark-mode {
+    @apply backdrop-blur bg-gradient-to-r from-amber-500 via-yellow-600 to-blue-500  z-50;
+}
+.nav-bar-dark-mode {
+    @apply backdrop-blur bg-gray-300/50 dark:bg-gray-700/50 z-50;
+}
+.svg-dark-mode {
+    @apply fill-current text-gray-950 dark:text-gray-50;
+}
+/* bg texts */
+
+.bg-dark-mode {
+    @apply bg-gray-50 dark:bg-gray-950;
+}
+.use-dark-mode {
+    @apply text-sm text-gray-950 hover:text-gray-500 dark:text-gray-50 dark:hover:text-gray-300;
+}
+.text-heading {
+    @apply text-sm font-semibold text-green-600;
+}
+
+/* nav Links */
+.text-dark{
+    @apply  font-bold text-gray-950  dark:text-gray-50;
+}
+.text-dark-mode-reverse{
+    @apply  font-bold text-gray-50  dark:text-gray-950;
+}
+.text-dark-mode {
+    @apply  text-base ml-2 antialiased text-gray-950  dark:text-gray-50;
+}
+.it-is-link {
+    @apply  text-gray-950  dark:text-gray-50;
+}
+.logout-link-dark-mode-hovers {
+    @apply  text-base ml-2 antialiased text-gray-950 hover:text-[#E63946] dark:text-gray-50 dark:hover:text-[#E63962];
+}
+.it-is-link-dark {;
+    @apply text-base ml-2 antialiased text-gray-950  dark:text-gray-50
+}
+.text-dark-mode-hovers {
+    @apply  text-sm ml-2 antialiased text-gray-950 hover:text-amber-400 dark:text-gray-50 dark:hover:text-amber-300;
+}
+.register-link-dark-hovers {
+    @apply inline-block
+    bg-gradient-to-r
+    from-amber-500
+    to-yellow-400
+    px-4
+    py-2
+    rounded-md
+    font-medium
+    text-gray-50
+    dark:text-gray-950
+    hover:from-yellow-400
+    hover:to-amber-500
+    transition
+    duration-300
+    ease-in-out;
+}
+/*hamburger menu*/
+.hamburger-menu-dark-mode {
+    @apply block absolute h-0.5 w-5 text-gray-950  dark:text-gray-50 bg-current transform transition duration-500 ease-in-out;
+}
+/* welcome page text */
+.welcome-text-dark-mode {
+    @apply text-sm font-bold text-gray-950 dark:text-gray-50;
+}
+/* price */
+.price-table-header-dark-mode {
+    @apply -mx-4 rounded-lg bg-gray-900 bg-opacity-50 backdrop-blur px-4 py-3;
+}
+.price-table-dark-mode {
+    @apply   bg-gray-50 dark:bg-gray-700 shadow-lg ;
+}
+.price-table-gradient-dark-mode {
+    @apply rounded-lg
+    ring-2
+    ring-transparent
+    bg-gradient-to-r
+    from-amber-500
+    to-amber-400;
+}
+
+.welcome-header-dark-mode {
+    @apply  text-base text-gray-950 dark:text-gray-50;
+}
+
+/* call for action button */
+.call-for-action-dark-mode {
+    @apply  text-sm/8  ml-2 mt-4 space-y-2 text-gray-950 hover:text-gray-500 dark:text-gray-50 dark:hover:text-gray-300;
+}
+.call-for-action-hovers {
+    @apply  text-black dark:text-gray-300 hover:text-yellow-700 dark:hover:text-yellow-500 transition-colors cursor-pointer;
+}
+/* footer nav Links */
+
+.footer-link-dark-mode-hovers {
+    @apply  text-sm/6 text-gray-950 hover:text-gray-500 dark:text-gray-50 dark:hover:text-gray-300
+}
+.footer-page-link-dark-mode {
+    @apply  text-sm/6 text-gray-950 dark:text-gray-50 ;
+}
+
+
+
+/* Highlighted Text */
+.text-highlight {
+    @apply text-lg font-bold text-yellow-500 dark:text-yellow-400;
+}
+
+/* Muted Text */
+.text-muted {
+    @apply text-sm text-gray-600 dark:text-gray-400;
+}
+
+/* Error Text */
+.text-error {
+    @apply text-sm font-medium text-red-600 dark:text-red-400;
+}
+
+/* Success Text */
+.text-success {
+    @apply text-sm font-medium text-green-600 dark:text-green-400;
+}
+
+.separate-line {
+    @apply dark:border-white/20 border-black/20
+}
+.sub-text{
+    @apply    text-gray-600 dark:text-gray-300
+}/* resources/css/custom.css */
+/*.bg-img{*/
+/*    @apply bg-cover  bg-center min-h-screen bg-[url('/public/img/bg/bg_day.svg')] dark:bg-[url('/public/img/bg/bg_dark.svg')];*/
+/*}*/
+.notification-bar-dark-mode {
+    @apply backdrop-blur bg-gradient-to-r from-amber-500 via-yellow-600 to-blue-500  z-50;
+}
+.nav-bar-dark-mode {
+    @apply backdrop-blur bg-gray-300/50 dark:bg-gray-700/50 z-50;
+}
+.svg-dark-mode {
+    @apply fill-current text-gray-950 dark:text-gray-50;
+}
+/* bg texts */
+
+.bg-dark-mode {
+    @apply bg-gray-50 dark:bg-gray-950;
+}
+.use-dark-mode {
+    @apply text-sm text-gray-950 hover:text-gray-500 dark:text-gray-50 dark:hover:text-gray-300;
+}
+.text-heading {
+    @apply text-sm font-semibold text-green-600;
+}
+
+/* nav Links */
+.text-dark{
+    @apply  font-bold text-gray-950  dark:text-gray-50;
+}
+.text-dark-mode-reverse{
+    @apply  font-bold text-gray-50  dark:text-gray-950;
+}
+.text-dark-mode {
+    @apply  text-base ml-2 antialiased text-gray-950  dark:text-gray-50;
+}
+.it-is-link {
+    @apply  text-gray-950  dark:text-gray-50;
+}
+.logout-link-dark-mode-hovers {
+    @apply  text-base ml-2 antialiased text-gray-950 hover:text-[#E63946] dark:text-gray-50 dark:hover:text-[#E63962];
+}
+.it-is-link-dark {;
+    @apply text-base ml-2 antialiased text-gray-950  dark:text-gray-50
+}
+.text-dark-mode-hovers {
+    @apply  text-sm ml-2 antialiased text-gray-950 hover:text-amber-400 dark:text-gray-50 dark:hover:text-amber-300;
+}
+.register-link-dark-hovers {
+    @apply inline-block
+    bg-gradient-to-r
+    from-amber-500
+    to-yellow-400
+    px-4
+    py-2
+    rounded-md
+    font-medium
+    text-gray-50
+    dark:text-gray-950
+    hover:from-yellow-400
+    hover:to-amber-500
+    transition
+    duration-300
+    ease-in-out;
+}
+/*hamburger menu*/
+.hamburger-menu-dark-mode {
+    @apply block absolute h-0.5 w-5 text-gray-950  dark:text-gray-50 bg-current transform transition duration-500 ease-in-out;
+}
+/* welcome page text */
+.welcome-text-dark-mode {
+    @apply text-sm font-bold text-gray-950 dark:text-gray-50;
+}
+/* price */
+.price-table-header-dark-mode {
+    @apply -mx-4 rounded-lg bg-gray-900 bg-opacity-50 backdrop-blur px-4 py-3;
+}
+.price-table-dark-mode {
+    @apply   bg-gray-50 dark:bg-gray-700 shadow-lg ;
+}
+.price-table-gradient-dark-mode {
+    @apply rounded-lg
+    ring-2
+    ring-transparent
+    bg-gradient-to-r
+    from-amber-500
+    to-amber-400;
+}
+
+.welcome-header-dark-mode {
+    @apply  text-base text-gray-950 dark:text-gray-50;
+}
+
+/* call for action button */
+.call-for-action-dark-mode {
+    @apply  text-sm/8  ml-2 mt-4 space-y-2 text-gray-950 hover:text-gray-500 dark:text-gray-50 dark:hover:text-gray-300;
+}
+.call-for-action-hovers {
+    @apply  text-black dark:text-gray-300 hover:text-yellow-700 dark:hover:text-yellow-500 transition-colors cursor-pointer;
+}
+/* footer nav Links */
+
+.footer-link-dark-mode-hovers {
+    @apply  text-sm/6 text-gray-950 hover:text-gray-500 dark:text-gray-50 dark:hover:text-gray-300
+}
+.footer-page-link-dark-mode {
+    @apply  text-sm/6 text-gray-950 dark:text-gray-50 ;
+}
+
+
+
+/* Highlighted Text */
+.text-highlight {
+    @apply text-lg font-bold text-yellow-500 dark:text-yellow-400;
+}
+
+/* Muted Text */
+.text-muted {
+    @apply text-sm text-gray-600 dark:text-gray-400;
+}
+
+/* Error Text */
+.text-error {
+    @apply text-sm font-medium text-red-600 dark:text-red-400;
+}
+
+/* Success Text */
+.text-success {
+    @apply text-sm font-medium text-green-600 dark:text-green-400;
+}
+
+.separate-line {
+    @apply dark:border-white/20 border-black/20
+}
+.sub-text{
+    @apply    text-gray-600 dark:text-gray-300
+}
