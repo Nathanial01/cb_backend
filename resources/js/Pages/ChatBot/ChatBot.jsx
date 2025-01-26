@@ -105,7 +105,7 @@ const ChatBot = () => {
             {/* Chatbox */}
             {isChatboxOpen && (
                 <div
-                    className="fixed align-middle bottom-20 right-0 md:bottom-0 md:right-8 rounded-xl shadow-xl w-full max-w-sm md:max-w-md pt-4 md:scale-100">
+                    className="fixed align-middle bottom-20 right-0 md:bottom-0 md:right-8 rounded-xl shadow-xl w-full max-w-sm md:max-w-md pt-4 md:scale-100 h-1/2">
                     {/* Chat Header */}
                     <div
                         className="bg-indigo-950 bg-opacity-25 backdrop-blur-3xl transition-all duration-300 hover:shadow-xl hover:bg-opacity-100 space-y-2 flex flex-col items-center justify-center w-full py-3 text-black dark:text-white rounded-t-lg shadow-md">
@@ -223,7 +223,7 @@ const ChatBot = () => {
                     {/* Chat Messages */}
                     <div
                         className="p-4 overflow-y-auto bg-indigo-950 bg-opacity-25 backdrop-blur-3xl"
-                        style={{height: "300px"}}
+                        style={{height: "calc(100% - 70px)"}} // Dynamic height for the chat area
                     >
                         {messages.map((msg, index) => (
                             <div
@@ -246,61 +246,80 @@ const ChatBot = () => {
 
                     {/* Chat Input */}
                     <div
-                        className="bg-indigo-950 bg-opacity-25 backdrop-blur-3xl grid grid-cols-6 gap-3 rounded-b-xl p-4 text-sm shadow-lg hover:shadow-xl transition-all duration-300">
-                        <textarea
-                            value={input}
-                            onChange={(e) => setInput(e.target.value)}
-                            className="bg-indigo-900 bg-opacity-25 backdrop-blur-xl text-slate-600 h-32 placeholder:text-slate-400 col-span-6 resize-none outline-none rounded-lg p-3 duration-300 focus:ring-2 focus:ring-slate-200 focus:shadow-inner"
-                            placeholder="Your message..."
-                            disabled={loading}
-                        ></textarea>
+                        className="bg-indigo-950 bg-opacity-25 backdrop-blur-3xl flex items-center gap-2 rounded-b-xl p-2 text-sm shadow-lg hover:shadow-xl transition-all duration-300 "
+                    >
+                        {/* File Attachment Button */}
                         <button
                             type="button"
-                            className=" col-span-1 flex justify-center items-center rounded-lg p-3 duration-300 bg-non hover:bg-slate-100 hover:border-slate-600 active:scale-95 focus:fill-blue-200 focus:bg-blue-400  hover:shadow-md group"
+                            className="flex justify-center items-center rounded-lg p-2 bg-inherit  active:scale-95 focus:outline-none focus:ring-2  text-black dark:text-white shadow-md hover:shadow-lg transition-transform duration-300"
                         >
                             <svg
-                                className="transform transition-transform group-hover:scale-110 duration-200"
-                                viewBox="0 0 512 512"
-                                height="20px"
                                 xmlns="http://www.w3.org/2000/svg"
+                                className="h-6 w-6"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                strokeWidth={2}
                             >
                                 <path
-                                    d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm177.6 62.1C192.8 334.5 218.8 352 256 352s63.2-17.5 78.4-33.9c9-9.7 24.2-10.4 33.9-1.4s10.4 24.2 1.4 33.9c-22 23.8-60 49.4-113.6 49.4s-91.7-25.5-113.6-49.4c-9-9.7-8.4-24.9 1.4-33.9s24.9-8.4 33.9 1.4zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"
-                                ></path>
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M16.5 13.5V6a4.5 4.5 0 00-9 0v10.5a6 6 0 0012 0V8.25m-3 6.75V8.25"
+                                />
                             </svg>
                         </button>
 
-                        {/* Right Icon Button */
-                        }
+                        {/* Textarea for Input */}
+                        <textarea
+                            value={input}
+                            onChange={(e) => setInput(e.target.value)}
+                            className="flex-1 bg-gray-100 dark:bg-gray-800 text-black dark:text-white h-12 placeholder-gray-400 dark:placeholder-gray-500 resize-none outline-none rounded-lg px-4 py-2 shadow-md focus:ring-2 focus:ring-blue-500 focus:shadow-lg transition-all duration-300 text-sm"
+                            placeholder="Type your message here..."
+                            disabled={loading}
+                        />
+
+                        {/* Microphone Button */}
                         <button
                             type="button"
-                            className="fill-slate-600 col-span-1 flex justify-center items-center rounded-lg p-3 duration-300 bg-none hover:bg-slate-100 hover:border-slate-600 active:scale-95 focus:fill-blue-200 focus:bg-blue-400   hover:shadow-md group"
+                            className="flex justify-center items-center rounded-lg p-2 bg-inherit   active:scale-95 focus:outline-none focus:ring-2 focus:ring-blue-500 text-black dark:text-white shadow-md hover:shadow-lg transition-transform duration-300"
                         >
                             <svg
-                                className="transform transition-transform group-hover:scale-110 duration-200"
-                                viewBox="0 0 512 512"
-                                height="20px"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 0.6 0.6"
+                                fill="none"
+                                className="h-6 w-6 text-black dark:text-white"
                                 xmlns="http://www.w3.org/2000/svg"
                             >
+                                {/* Main rectangle path */}
                                 <path
-                                    d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM174.6 384.1c-4.5 12.5-18.2 18.9-30.7 14.4s-18.9-18.2-14.4-30.7C146.9 319.4 198.9 288 256 288s109.1 31.4 126.6 79.9c4.5 12.5-2 26.2-14.4 30.7s-26.2-2-30.7-14.4C328.2 358.5 297.2 336 256 336s-72.2 22.5-81.4 48.1zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"
-                                ></path>
+                                    d="M.2.15A.075.075 0 0 1 .275.075h.05A.075.075 0 0 1 .4.15V.3a.075.075 0 0 1-.075.075h-.05A.075.075 0 0 1 .2.3z"
+                                    stroke="currentColor"
+                                    strokeWidth="0.05"
+                                />
+
+                                {/* Supporting paths */}
+                                <path
+                                    d="M.475.275V.3a.15.15 0 0 1-.15.15h-.05A.15.15 0 0 1 .125.3V.275M.3.45v.075"
+                                    stroke="currentColor"
+                                    strokeWidth="0.05"
+                                    strokeLinecap="round"
+                                />
                             </svg>
+
+
                         </button>
-                        {/*spacibg*/}
-                        <div></div>
-                        <div></div>
-                        {/*spacibg*/}
-                        {/* Submit Button */}
+
+                        {/* Send Button */}
                         <button
                             type="submit"
                             onClick={handleFormSubmit}
-                            className="bg-none stroke-slate-600 col-span-2 flex items-center justify-center gap-2 rounded-lg p-3 duration-300 hover:bg-slate-100 hover:border-slate-600 active:scale-95 focus:stroke-blue-200 focus:bg-blue-400 hover:shadow-md group"
+                            className="flex justify-center items-center rounded-lg p-2  active:scale-95 focus:outline-none focus:ring-2  text-white shadow-md hover:shadow-lg transition-transform duration-300"
                             disabled={loading}
                         >
                             <svg
-                                className="transform transition-transform group-hover:translate-x-1 duration-200"
-                                xmlns="http://www.w3.org/2000/svg"
+                                className="transform transition-transform group-hover:translate-x-1 duration-200 svg-dark-mode"
+
                                 width="24px"
                                 height="24px"
                                 viewBox="0 0 24 24"
@@ -319,24 +338,9 @@ const ChatBot = () => {
                                     strokeLinejoin="round"
                                 ></path>
                             </svg>
-                            <span className="font-medium text-slate-900 group-hover:text-slate-800">
-                                  {loading && (
-                                      /* From Uiverse.io by Javierrocadev */
-                                      /* From Uiverse.io by SmookyDev */
-                                      <div
-                                          className="w-8 aspect-square rounded-full relative flex justify-center items-center animate-[spin_3s_linear_infinite] z-40 bg-[conic-gradient(white_0deg,white_300deg,transparent_270deg,transparent_360deg)] before:animate-[spin_2s_linear_infinite] before:absolute before:w-[60%] before:aspect-square before:rounded-full before:z-[80] before:bg-[conic-gradient(white_0deg,white_270deg,transparent_180deg,transparent_360deg)] after:absolute after:w-3/4 after:aspect-square after:rounded-full after:z-[60] after:animate-[spin_3s_linear_infinite] after:bg-[conic-gradient(#065f46_0deg,#065f46_180deg,transparent_180deg,transparent_360deg)]"
-                                      >
-  <span
-      className="absolute w-[20%] aspect-square rounded-full z-[60] animate-[spin_5s_linear_infinite] bg-[conic-gradient(#34d399_0deg,#34d399_180deg,transparent_180deg,transparent_360deg)]"
-  >
-  </span>
-                                      </div>
-
-
-                                  )}
-                            </span>
                         </button>
                     </div>
+
                 </div>
             )}
         </div>
