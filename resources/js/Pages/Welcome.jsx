@@ -91,10 +91,10 @@ export default function Dashboard({ gigCount = 0, invitationCount = 0, user }) {
         <>
 
             <Head>
-                <title>Dashboard - ImmoScan</title>
+                <title>Dashboard - CyrBot</title>
                 <meta
                     name="description"
-                    content="Scan and discover real estate layouts effortlessly with ImmoScan."
+                    content="Your Personal CyrBot."
                 />
             </Head>
             <NavBar>
