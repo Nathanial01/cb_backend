@@ -55,7 +55,7 @@ const ChatBot = () => {
             <button
                 id="chatbot-icon"
                 onClick={toggleChatbox}
-                className="fixed bottom-4 right-4 inline-flex items-center justify-center backdrop-blur-3xl text-black dark:text-white"
+                className="fixed bottom-4 right-4 inline-flex items-center justify-center backdrop-blur-3xl text-black dark:text-white bg-none"
             >
                 <div
                     className="relative group w-12 h-12 rounded-full bg-indigo-950 bg-opacity-25 backdrop-blur-3xl  cursor-pointer flex items-center justify-center  border border-white/30 hover:bg-indigo-950">
